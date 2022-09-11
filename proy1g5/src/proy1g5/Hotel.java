@@ -43,5 +43,19 @@ public class Hotel {
         tail=tail.getNext();
     }
     
-    public 
+    public Huesped eliminarHuesped(String rut){
+        NodoHuespedes aux=head;
+        while(aux.getNext()!=null){
+            if(aux.getNext().getHuesped().getRut().equals(rut)){
+                Huesped h=aux.getNext().getHuesped();
+                aux.setNext(aux.getNext().getNext());
+                if (aux.getNext()==null){
+                    tail=aux;
+                    return h;
+                }  
+            }
+            aux=aux.getNext();
+        }
+        return null;
+    }
 }
