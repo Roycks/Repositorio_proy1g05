@@ -57,4 +57,23 @@ public class Compañia {
             }
         return false;
     }
+    public boolean agregarHuesped(String cod,Huesped hp){
+        NodoHoteles aux=head;
+        while(aux.getNext()!=null){
+            if(aux.getNext().getHotel().getCod().equals(cod)){
+                if(aux.getNext().getHotel().buscarHuesped(hp.getRut())==false){
+                    return false;
+                }
+            }
+            aux=aux.getNext();
+        }
+        aux=head;
+        while(aux.getNext()!=null){
+            if(aux.getNext().getHotel().getCod().equals(cod)){
+                aux.getNext().getHotel().agregarHuesped(hp);
+                return true;
+            }
+            aux=aux.getNext();
+        }
+        return false;
 }
