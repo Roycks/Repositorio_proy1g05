@@ -43,20 +43,7 @@ public class Compañia {
         }
         return null;
     }
-    public boolean agregarHuesped(Hotel h,Huesped hp){// codigo del hotel, rut 
-        NodoHoteles aux=head;
-        while(aux.getNext()!=null){
-            if(h.buscarHuesped(hp)){
-                return false;
-            }
-        }
-        while(aux.getNext()!=null)
-            if(aux.getNext().getHotel()==h){
-                h.agregarHuesped(hp);
-                return true;
-            }
-        return false;
-    }
+    
     public boolean agregarHuesped(String cod,Huesped hp){
         NodoHoteles aux=head;
         while(aux.getNext()!=null){
