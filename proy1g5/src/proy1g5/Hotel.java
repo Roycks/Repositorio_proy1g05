@@ -39,6 +39,7 @@ public class Hotel {
         return true;
     }
     public void agregarHuesped(Huesped huesped){
-
-}
+        tail.setNext(new NodoHuespedes(huesped,null));
+        tail=tail.getNext();
+    }
 }
