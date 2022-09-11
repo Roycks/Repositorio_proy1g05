@@ -42,4 +42,6 @@ public class Hotel {
         tail.setNext(new NodoHuespedes(huesped,null));
         tail=tail.getNext();
     }
+    
+    public 
 }
