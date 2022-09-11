@@ -43,6 +43,17 @@ public class Compañia {
         }
         return null;
     }
+    public Huesped eliminarHuesped(String cod,String rut){
+         NodoHoteles aux=head;
+        while (aux.getNext()!=null){
+            if(aux.getNext().getHotel().getCod().equals(cod)){
+                Huesped h=aux.getNext().getHotel().eliminarHuesped(rut);
+                return h;
+            }
+            aux=aux.getNext();
+        }
+        return null;
+    }
     
     public boolean agregarHuesped(String cod,Huesped hp){
         NodoHoteles aux=head;
