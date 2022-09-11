@@ -28,10 +28,10 @@ public class Hotel {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public boolean buscarHuesped(Huesped huesped){
+    public boolean buscarHuesped(String rut){
         NodoHuespedes aux=head;
         while(aux.getNext()!=null){
-            if(aux.getNext().getHuesped().getRut().equals(huesped.getRut())){
+            if(aux.getNext().getHuesped().getRut().equals(rut)){
                 return false;
             }
             aux=aux.getNext();
