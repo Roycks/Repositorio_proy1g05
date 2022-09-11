@@ -58,4 +58,17 @@ public class Hotel {
         }
         return null;
     }
+        public double promedioEdad(){
+        int cont=0;
+        double suma=0;
+        NodoHuespedes aux=head;
+            while(aux.getNext()!=null){
+                suma=aux.getNext().getHuesped().getEdad()+suma;
+                cont++;
+             aux=aux.getNext();  
+            }
+          
+        return (suma/cont);
+ 
+    }
 }
